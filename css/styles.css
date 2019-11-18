@@ -1,4 +1,47 @@
 .content {
   margin: 2vw auto 2vw auto;
+  font-family: sans-serif;
 }
+
+.entry .header {
+  font-size: 3vw;
+}
+.entry .statistic {
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+}
+.entry .statistic .caption {
+  font-weight: bold;
+}
+.entry .text {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #e4e4e4;
+}
+.entry .text .list {
+  background-color: white;
+}
+
+.size1 {
+  width: 95%;
+}
+
+.size2 {
+  width: 65%;
+}
+
+.size3 {
+  width: 45%;
+}
+
+.size4 {
+  width: 30%;
+}
+
+.size5 {
+  width: 15%;
+}
+
 /*# sourceMappingURL=styles.css.map */

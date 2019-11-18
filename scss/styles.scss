@@ -1,3 +1,84 @@
 .content {
    margin: 2vw auto 2vw auto;
+   font-family: 'Open Sans', sans-serif;
 }
+
+.entry {
+   .header {
+      font-size: 3vw;
+   }
+
+   .statistic {
+      padding: 5px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: gray;
+      .caption {
+         font-weight: bold;  
+      }
+      .number {
+
+      }
+   }
+
+   .imagegroup {
+   margin: 2vw 3vw 2vw 3vw;
+
+   .caption {
+      font-style: oblique;
+      color: rgb(184, 184, 184);
+      font-size: 1vw;
+      margin-left: 3vw;
+   }
+      .image {
+         margin: 5px;
+         outline-style: solid;
+      outline-width: 1px;
+      outline-color: rgb(197, 197, 197);
+      transition: box-shadow 0.2s;
+      }
+
+      .imagelink:hover {
+         box-shadow: -5px 10px 10px #eeeeee;
+         cursor: pointer;
+      }
+
+   }
+
+   .text {
+      padding: 15px;
+      border-radius: 5px;
+      background-color: rgb(228, 228, 228);
+      .list {
+         background-color: white;
+
+      }
+   }
+}
+
+.size1 { width: 95%; }
+.size2 { width: 65%; }
+.size3 { width: 45%; }
+.size4 { width: 30%; }
+.size5 { width: 15%; }
+
+.content {
+   margin: auto;
+   margin-top: 4vw;
+   width: 65vw;
+   font-family: "Open Sans", sans-serif;
+}
+
+
+
+
+
+
+// a single number statistic
+//             caption & number
+//          text (paragraph)
+//             be able to have lists
+//             probs like a gray background idk
+//          pictures
+//             with captionss
+//          links
