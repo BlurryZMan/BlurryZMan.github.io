@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-.vscode
-=======
 .vscode
 *.css.map
->>>>>>> 2e6b289f13c387241a988327d028111a71b31f4c
+node_modules

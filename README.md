@@ -1,1 +1,1 @@
-cubing blog
+instructions for updating the blog:
