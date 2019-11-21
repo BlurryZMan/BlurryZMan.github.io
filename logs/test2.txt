@@ -1,19 +1,13 @@
-header@ Test
+header@ Test2
 
 startStatistic@
-   statistic@ Time spent: 45 minutes
-   statistic@ Avg Solve: 8.34s
+   statistic@ Time spent: 15 minutes
+   statistic@ Avg Solve: 8.76s
 end@
 
 startText@
    text@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
    startList@
-      listItem@ Ao10: 8.56
-      listItem@ Ao100: 8.45
+      listItem@ Ao10: 8.86
    end@
-end@
-
-startImageGroup@
-   image@ mario.jpg : size3
-   caption@ Mario, 2003, colorized.
 end@

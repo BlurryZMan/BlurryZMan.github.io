@@ -1,16 +1,51 @@
 const fs = require('fs');
 
+const {
+   getEndHtml,
+   getHeaderHtml,
+   getStartStatisticHtml,
+   getStatisticHtml,
+   getStartTextHtml,
+   getTextHtml,
+   getStartListHtml,
+   getListItemHtml,
+   getStartImageGroupHtml,
+   getImageHtml,
+   getCaptionHtml,
+   getLinkHtml
+} = require('./htmlHelpers')
+
+// import  from './htmlHelpers.js'
+
 const logsfolder = './logs/'; // where logs are stored
 
 /**
- * modules are basically individual components of an
+ * modules are  individual components of an
  * entry, such as a block of statistics, newline, or
  * text block. this map maps each type of module to a function
  * that will return the correct templated html for the module,
  * given the correct tokens.
  */
+
+ /**
+  * moduleTypes maps the name of a component to its
+  * corresponding html generation function.
+  * 
+  */
 var moduleTypes = new Map()
+
+moduleTypes.set("end", getEndHtml)
 moduleTypes.set("header", getHeaderHtml)
+moduleTypes.set("startStatistic", getStartStatisticHtml)
+moduleTypes.set("statistic", getStatisticHtml)
+moduleTypes.set("startText", getStartTextHtml)
+moduleTypes.set("text", getTextHtml)
+moduleTypes.set("startList", getStartListHtml)
+moduleTypes.set("listItem", getListItemHtml)
+moduleTypes.set("startImageGroup", getStartImageGroupHtml)
+moduleTypes.set("image", getImageHtml)
+moduleTypes.set("caption", getCaptionHtml)
+moduleTypes.set("link", getLinkHtml)
 
 fs.readdir(logsfolder, async (err, files) => {
 
@@ -62,11 +97,13 @@ function parseEntry(file) {
 
    lines.forEach(line => {
 
+      if (line=='') return
+
       let tokens = line.split("@")
-      let type = tokens.shift()
+      let type = tokens.shift().trim()
 
       if (moduleTypes.has(type))
-         entryStr += moduleTypes.get(type)(tokens)
+         entryStr += moduleTypes.get(type)(tokens[0].trim())
       else {
          console.log("invalid type: "+type)
          process.exit()
@@ -80,15 +117,12 @@ function parseEntry(file) {
 }
 
 function createHtmlFile(htmlstring) {
-   // fs.writeFile('index.html', htmlstring, function (err) {
-   //    if (err) {
-   //       console.log(err)
-   //       process.exit()
-   //    }
-   //    console.log('File created successfully.');
-   // }); 
+   fs.writeFile('index.html', htmlstring, function (err) {
+      if (err) {
+         console.log(err)
+         process.exit()
+      }
+      console.log('File created successfully.');
+   }); 
 }
 
-function getHeaderHtml(tokens) {
-   return `<div class="header">${tokens[0]}</div>`
-}

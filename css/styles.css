@@ -30,12 +30,12 @@
 }
 
 .entry .imagegroup {
-  margin: 2vw 3vw 2vw 3vw;
+  margin: 2vw 4vw 2vw 4vw;
 }
 
 .entry .imagegroup .caption {
-  color: #e6e6e6;
-  font-size: 1vw;
+  color: #adadad;
+  font-size: 1.25vw;
   margin-left: 3vw;
 }
 
