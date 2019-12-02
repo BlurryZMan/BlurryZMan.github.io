@@ -15,9 +15,9 @@ const {
    getLinkHtml
 } = require('./htmlHelpers')
 
-// import  from './htmlHelpers.js'
-
-const logsfolder = './logs/'; // where logs are stored
+const logsfolder = './logs/';             // where logs are stored
+const targetFile = './index.html';        // what html file to write to
+const blogName = 'Issues - Alan Walker';  // title of blog
 
 /**
  * modules are  individual components of an
@@ -79,13 +79,13 @@ function generateHtml(filescontents) {
    </head>
    <body>
    <div class="content">
-      <div class="title">Issues - Alan Walker</div>`
+      <div class="title">${blogName}</div>`
 
    filescontents.forEach(file => {
       str += parseEntry(file);
    })
 
-   str += `</div></body></html>`
+   str += `</div><script src="js/index.js"></script><script src="js/three.js"></script></body></html>`
 
    return str;
 }
@@ -117,7 +117,7 @@ function parseEntry(file) {
 }
 
 function createHtmlFile(htmlstring) {
-   fs.writeFile('index.html', htmlstring, function (err) {
+   fs.writeFile(targetFile, htmlstring, function (err) {
       if (err) {
          console.log(err)
          process.exit()

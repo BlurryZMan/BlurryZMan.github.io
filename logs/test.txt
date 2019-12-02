@@ -1,16 +1,17 @@
 header@ Test
 
 startStatistic@
-   statistic@ Time spent: 45 minutes
-   statistic@ Avg Solve: 8.34s
+   statistic@ name of statistic: value of statistic
 end@
 
 startText@
-   text@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+   text@ adfjaldskjflksajlfdk
+   link@ https://www.google.com
    startList@
-      listItem@ Ao10: 8.56
-      listItem@ Ao100: 8.45
-   end@
+      listItem@ list item 1
+      listItem@ item 2
+      listItem@ item 3
+   end@   
 end@
 
 startImageGroup@

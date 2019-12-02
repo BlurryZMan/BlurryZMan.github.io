@@ -1,7 +1,14 @@
 .content {
   font-family: 'Open Sans', sans-serif;
   width: 60vw;
-  margin: 2vw auto 2vw auto;
+  margin: 2vw auto 4vw auto;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 90vw;
+    margin: 4vh auto 4vh auto;
+  }
 }
 
 .content .title {
@@ -9,9 +16,22 @@
   font-size: 3vw;
 }
 
+@media screen and (max-width: 600px) {
+  .content .title {
+    font-size: 3vh;
+  }
+}
+
 .entry .header {
   font-size: 2vw;
   margin: 2vw 3vw 0.5vw 5vw;
+}
+
+@media screen and (max-width: 600px) {
+  .entry .header {
+    font-size: 5vw;
+    margin: 4vh 3vw 1vh 5vw;
+  }
 }
 
 .entry .statisticblock {
@@ -22,6 +42,13 @@
   margin: 0.5vw 2vw 0.5vw 4vw;
   border-radius: 3px;
   display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .entry .statisticblock {
+    padding: 1vh;
+    margin: 1vh 2vw 1vh 4vw;
+  }
 }
 
 .entry .statisticblock .caption {
@@ -39,6 +66,12 @@
   margin-left: 3vw;
 }
 
+@media screen and (max-width: 600px) {
+  .entry .imagegroup .caption {
+    font-size: 2vh;
+  }
+}
+
 .entry .imagegroup .image {
   margin: 5px;
   outline-style: solid;
@@ -48,12 +81,12 @@
   transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  cursor: pointer;
 }
 
-.entry .imagegroup .imagelink:hover {
+.entry .imagegroup .image:hover {
   -webkit-box-shadow: -5px 10px 10px #eeeeee;
           box-shadow: -5px 10px 10px #eeeeee;
-  cursor: pointer;
 }
 
 .entry .text {
@@ -63,12 +96,38 @@
   background-color: #eeeeee;
 }
 
+@media screen and (max-width: 600px) {
+  .entry .text {
+    padding: 1vh 2vh 1vh 2vh;
+  }
+}
+
+.entry .text .link {
+  word-wrap: break-word;
+  margin: auto 2vh auto 2vh;
+  color: #4d4d99;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+  cursor: pointer;
+}
+
+.entry .text .link:hover {
+  color: #050547;
+}
+
 .entry .text .list {
   background-color: #fafafa;
   border-radius: 3px;
   padding: 1vw;
   margin: 1vw 0 1vw 0;
   display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  .entry .text .list {
+    padding: 1vh;
+    margin: 1vh 0 1vh 0;
+  }
 }
 
 .entry .text .list .list-child {
@@ -93,5 +152,23 @@
 
 .size5 {
   width: 15%;
+}
+
+@media screen and (max-width: 600px) {
+  .size1 {
+    width: 100%;
+  }
+  .size2 {
+    width: 95%;
+  }
+  .size3 {
+    width: 75%;
+  }
+  .size4 {
+    width: 65%;
+  }
+  .size5 {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
